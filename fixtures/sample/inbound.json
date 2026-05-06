@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "id": "evt-001",
+      "type": "message.created",
+      "timestamp": "2026-05-06T08:00:00.000Z",
+      "channel": { "id": "qq:guild:demo/channel:general", "kind": "qq", "name": "general" },
+      "sender": { "id": "qq:user:alice", "displayName": "Alice" },
+      "message": { "id": "msg-001", "kind": "text", "text": "hello from a local QQ fixture" }
+    },
+    {
+      "id": "evt-002",
+      "type": "message.created",
+      "timestamp": "2026-05-06T08:00:03.000Z",
+      "channel": { "id": "qq:guild:demo/channel:general", "kind": "qq", "name": "general" },
+      "sender": { "id": "qq:user:bob", "displayName": "Bob" },
+      "message": { "id": "msg-002", "kind": "markdown", "text": "**local replay** keeps adapter work safe" }
+    }
+  ]
+}
