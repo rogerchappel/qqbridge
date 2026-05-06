@@ -1,0 +1,17 @@
+{
+  "actions": [
+    {
+      "id": "act-001",
+      "type": "send.message",
+      "channel": { "id": "qq:guild:demo/channel:general", "kind": "qq" },
+      "message": { "id": "draft-001", "kind": "text", "text": "queued locally; not sent to QQ" }
+    },
+    {
+      "id": "act-002",
+      "type": "send.reaction",
+      "channel": { "id": "qq:guild:demo/channel:general", "kind": "qq" },
+      "messageId": "msg-001",
+      "emoji": "✅"
+    }
+  ]
+}
