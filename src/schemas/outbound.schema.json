@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qqbridge outbound fixture",
+  "type": "object",
+  "required": ["actions"],
+  "properties": {
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "channel"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "enum": ["send.message", "send.reaction", "delete.message"] },
+          "channel": { "type": "object", "required": ["id", "kind"] },
+          "message": { "type": "object" },
+          "messageId": { "type": "string" },
+          "emoji": { "type": "string" }
+        }
+      }
+    }
+  }
+}
