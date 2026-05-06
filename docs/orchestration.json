@@ -1,0 +1,12 @@
+{
+  "name": "qqbridge",
+  "mode": "local-first",
+  "networkDefault": "disabled",
+  "steps": [
+    { "id": "fixture-author", "command": "edit fixtures/*.json" },
+    { "id": "validate-inbound", "command": "qqbridge validate fixtures/sample/inbound.json" },
+    { "id": "replay", "command": "qqbridge replay fixtures/sample/inbound.json --format jsonl" },
+    { "id": "validate-outbound", "command": "qqbridge validate fixtures/outbound/actions.json --kind outbound" }
+  ],
+  "forbiddenByDefault": ["qq network calls", "credential lookup", "browser cookie scraping", "telemetry"]
+}
