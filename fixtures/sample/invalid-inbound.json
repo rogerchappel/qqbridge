@@ -1,0 +1,12 @@
+{
+  "events": [
+    {
+      "id": "bad event id",
+      "type": "message.sent",
+      "timestamp": "not-a-date",
+      "channel": { "id": "channel with spaces", "kind": "qq" },
+      "sender": { "id": "qq:user:alice" },
+      "message": { "id": "msg-003", "kind": "unknown", "text": "bad shape" }
+    }
+  ]
+}
