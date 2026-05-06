@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qqbridge inbound fixture",
+  "type": "object",
+  "required": ["events"],
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "timestamp", "channel", "sender", "message"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": { "enum": ["message.created", "message.updated", "message.deleted"] },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "channel": { "type": "object", "required": ["id", "kind"] },
+          "sender": { "type": "object", "required": ["id"] },
+          "message": { "type": "object", "required": ["id", "kind", "text"] }
+        }
+      }
+    }
+  }
+}
