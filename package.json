@@ -16,7 +16,10 @@
     "fixtures",
     "docs",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
   ],
   "scripts": {
     "test": "node --test tests/*.test.js",
@@ -38,5 +41,13 @@
   "license": "MIT",
   "engines": {
     "node": ">=20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/qqbridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/qqbridge/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/qqbridge#readme"
 }
