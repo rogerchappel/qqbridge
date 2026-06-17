@@ -47,6 +47,17 @@ This is not a QQ client. The CLI never sends messages, reads tokens, scrapes coo
 
 The idea was inspired by an adjacent public `openclaw-qqbot` signal noted in the PRD. qqbridge is a fresh local-first test kit and does not copy that implementation.
 
+## Release readiness
+
+Run the same checks that CI uses before opening a release PR:
+
+```sh
+npm run release:readiness
+npm run release:check
+```
+
+`release:readiness` validates repository metadata, the package files allowlist, package smoke coverage, and CI placeholder cleanup. `release:check` runs the project build, test, smoke, and package dry-run checks where configured.
+
 ## Contributing
 
 Keep changes small and fixture-driven. Add tests for new message shapes and run:
